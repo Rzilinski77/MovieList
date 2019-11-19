@@ -1,0 +1,11 @@
+C:\Users\rzili\source\repos\MovieList\MovieList\bin\Debug\netcoreapp3.0\MovieList.exe
+C:\Users\rzili\source\repos\MovieList\MovieList\bin\Debug\netcoreapp3.0\MovieList.deps.json
+C:\Users\rzili\source\repos\MovieList\MovieList\bin\Debug\netcoreapp3.0\MovieList.runtimeconfig.json
+C:\Users\rzili\source\repos\MovieList\MovieList\bin\Debug\netcoreapp3.0\MovieList.runtimeconfig.dev.json
+C:\Users\rzili\source\repos\MovieList\MovieList\bin\Debug\netcoreapp3.0\MovieList.dll
+C:\Users\rzili\source\repos\MovieList\MovieList\bin\Debug\netcoreapp3.0\MovieList.pdb
+C:\Users\rzili\source\repos\MovieList\MovieList\obj\Debug\netcoreapp3.0\MovieList.csprojAssemblyReference.cache
+C:\Users\rzili\source\repos\MovieList\MovieList\obj\Debug\netcoreapp3.0\MovieList.AssemblyInfoInputs.cache
+C:\Users\rzili\source\repos\MovieList\MovieList\obj\Debug\netcoreapp3.0\MovieList.AssemblyInfo.cs
+C:\Users\rzili\source\repos\MovieList\MovieList\obj\Debug\netcoreapp3.0\MovieList.dll
+C:\Users\rzili\source\repos\MovieList\MovieList\obj\Debug\netcoreapp3.0\MovieList.pdb
