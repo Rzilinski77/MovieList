@@ -7,72 +7,93 @@ namespace MovieList
     {
         static void Main(string[] args)
         {
-            try
+            Movie M = new Movie();
+
+            List<Movie> movieList = new List<Movie>()
             {
-                List<Movie> movieList = new List<Movie>()
-            {
-                {new Movie("Toy Story", "animated") },
-                {new Movie("Coco", "animated") },
-                {new Movie("Wall-E", "animated") },
-                {new Movie("John Q", "drama") },
-                {new Movie("Memiors of a Geisha", "drama") },
-                {new Movie("Get Out", "horror") },
-                {new Movie("Us", "horror") },
-                {new Movie("IT", "horror") },
-                {new Movie("Interstellar", "scifi") },
-                {new Movie("Star Wars", "scifi") }
+                {new Movie("Toy Story", "animated", "1") },
+                {new Movie("Coco", "animated", "1") },
+                {new Movie("Wall-E", "animated", "1") },
+                {new Movie("Antz", "animated", "1") },
+                {new Movie("Balto", "animated", "1") },
+                {new Movie("John Q", "drama", "2") },
+                {new Movie("The Shawshank Redemption", "drama", "2") },
+                {new Movie("Forest Gump", "drama", "2") },
+                {new Movie("Cast Away", "drama", "2") },
+                {new Movie("Memiors of a Geisha", "drama", "2") },
+                {new Movie("Get Out", "horror", "3") },
+                {new Movie("Anabelle", "horror", "3") },
+                {new Movie("The Grudge", "horror", "3") },
+                {new Movie("Us", "horror", "3") },
+                {new Movie("IT", "horror", "3") },
+                {new Movie("Interstellar", "scifi", "4") },
+                {new Movie("Alien", "scifi", "4") },
+                {new Movie("Back to the Future", "scifi", "4") },
+                {new Movie("Star Wars", "scifi", "4") }
             };
 
-                Console.WriteLine("Welcome to the Movie List Application!");
-                Console.WriteLine("What category are you interested in?");
-                Console.WriteLine("- Animated");
-                Console.WriteLine("- Drama");
-                Console.WriteLine("- Horror");
-                Console.WriteLine("- Scifi");
+            movieList.Sort((x, y) => x.Title.CompareTo(y.Title));
+            
+            Console.WriteLine("Welcome to the Movie List Application!");
+            Console.WriteLine("What category are you interested in?)");
+            Console.WriteLine("1) Animated");
+            Console.WriteLine("2) Drama");
+            Console.WriteLine("3) Horror");
+            Console.WriteLine("4) Scifi");
+            Console.WriteLine();
+            string input = Console.ReadLine();
+            string ans = Movie.Change(input);
+            Console.WriteLine();
+            foreach (Movie m in movieList)
+            {
+                //input = m.Category.ToLower();
 
-                string input = Validate(Console.ReadLine().ToLower());
-
-                foreach (Movie m in movieList)
+                if (m.Category == ans)
                 {
-
-                    if (m.Category == input)
-                    {
-                        Console.WriteLine($"{m.Title}");
-                    }
+                    Console.WriteLine($"{m.Title}");
                 }
             }
-            catch (FormatException ex)
-            {
-                Console.WriteLine("Please enter a valid category");
-            }
-            catch (NullReferenceException ex)
-            {
-                Console.WriteLine("Please enter a valid category");
-            }
-            catch (ArgumentNullException ex)
-            {
-                Console.WriteLine("Please enter a valid category");
-            }
+
         }
-        public static string Validate(string input)
-        {
-            bool again = true;
-            while (true)
-            {
 
-                if (input == "drama" || input == "animated" || input == "scifi" || input == "horror")
-                {
-                    again = false;
-                    return input;
+        //public static string Validate(string input)
+        //{
+        //    //bool again = true;
+        //    while (true)
+        //    {
+        //        try
+        //        {
+        //            if (input.ToLower() == "drama" || input.ToLower() == "animated" || input.ToLower() == "scifi" || input.ToLower() == "horror")
+        //            {
+        //                //again = false;
+        //                return input.ToLower();
 
-                }
-                else
-                {
-                    Console.WriteLine("Please enter a valid category");
-                    input = Console.ReadLine();
-                }
-            }
-            again = true;
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine("Please enter a valid category");
+        //                input = Console.ReadLine();
+        //            }
+        //        }
+        //        catch (FormatException ex)
+        //        {
+        //            Console.WriteLine("Please enter a valid category");
+        //            input = Console.ReadLine();
+        //            //again = true;
+        //        }
+        //        catch (ArgumentNullException ex)
+        //        {
+        //            Console.WriteLine("Please enter a valid category");
+        //            input = Console.ReadLine();
+        //            //again = true;
+        //        }
+        //        catch (NullReferenceException ex)
+        //        {
+        //            Console.WriteLine("Please enter a valid category");
+        //            input = Console.ReadLine();
+        //        }
+        //    }
+            //again = true;
         }
     }
 }
