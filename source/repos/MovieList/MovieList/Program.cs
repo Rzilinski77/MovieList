@@ -35,7 +35,7 @@ namespace MovieList
             movieList.Sort((x, y) => x.Title.CompareTo(y.Title));
 
             Console.WriteLine("Welcome to the Movie List Application!");
-            Console.WriteLine("What category are you interested in?)");
+            Console.WriteLine("What category are you interested in?");
             Console.WriteLine("1) Animated");
             Console.WriteLine("2) Drama");
             Console.WriteLine("3) Horror");

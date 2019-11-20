@@ -43,7 +43,7 @@ namespace MovieList
                 {
                     if (input == "1")
                     {
-                        category = "animation";
+                        category = "animated";
                         again = false;
                     }
                     else if (input == "2")
